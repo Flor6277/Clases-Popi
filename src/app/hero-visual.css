@@ -1,0 +1,539 @@
+/*  HERO */
+
+section.hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: calc(100vh - 76px);
+    min-height: calc(100svh - 76px);
+
+    display: flex;
+    align-items: center;
+
+    padding-top: clamp(24px, 5vh, 64px);
+    padding-bottom: clamp(24px, 5vh, 64px);
+}
+
+/* DISTRIBUCIÓN */
+
+.hero .hero__grid {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.91fr)
+        minmax(460px, 1.09fr);
+    align-items: center;
+    gap: clamp(20px, 3vw, 52px);
+}
+
+.hero .hero__copy {
+    position: relative;
+    z-index: 3;
+    width: min(100%, 760px);
+}
+
+/*  CONTENEDOR DEL GRÁFICO  */
+
+.hero .math-visual {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+    /*
+    El gráfico usa gran parte del alto disponible,
+    pero sin obligar al Hero a crecer.
+  */
+    height: clamp(500px, 72vh, 720px);
+
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+/*
+  El viewBox del SVG ya fue reducido para eliminar
+  espacio vacío interno.
+
+  Además lo hacemos ligeramente mayor que su contenedor
+  para aprovechar mejor el sector derecho.
+*/
+
+.hero .math-visual__svg {
+    width: 126%;
+    height: 126%;
+
+    max-width: none;
+
+    overflow: visible;
+
+    transform: translateX(2%) scale(1.02);
+
+    transform-origin: center;
+}
+
+/* 
+   GRILLA CARTESIANA
+    */
+
+.hero .math-visual__grid {
+    opacity: 0.18;
+}
+
+.hero .math-visual__grid line {
+    stroke: #cfe0ff;
+
+    stroke-width: 1;
+}
+
+/* 
+   EJES
+    */
+
+.hero .math-visual__axes {
+    opacity: 0.28;
+}
+
+.hero .math-visual__axes line,
+.hero .math-visual__axes path {
+    fill: none;
+
+    stroke: #1566ed;
+
+    stroke-width: 1.5;
+}
+
+/* 
+   CURVA PRINCIPAL
+    */
+
+.hero .math-visual__curve {
+    opacity: 0.82;
+    filter: drop-shadow(0 10px 24px rgba(21, 102, 237, 0.14));
+    animation: popiMathCurve 10s ease-in-out infinite;
+}
+
+/* 
+   CURVA SECUNDARIA
+    */
+
+.hero .math-visual__curve-secondary {
+    opacity: 0.42;
+}
+
+/* 
+   PI
+    */
+
+.hero .math-visual__pi {
+    font-family: "Cambria Math", Cambria, Georgia, serif;
+
+    font-size: 215px;
+
+    font-weight: 400;
+
+    opacity: 0.13;
+
+    transform-origin: center;
+
+    animation: popiMathPi 13s ease-in-out infinite;
+}
+
+/* 
+   FÓRMULAS
+    */
+
+.hero .math-visual__formula {
+    fill: #1566ed;
+
+    font-family: "Cambria Math", Cambria, Georgia, serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    opacity: 0.42;
+}
+
+.hero .math-visual__formula--coral {
+    fill: #d824a9;
+    opacity: 0.34;
+}
+
+/* 
+   PUNTOS
+    */
+
+.hero .math-visual__points {
+    fill: #1566ed;
+
+    opacity: 0.65;
+
+    animation: popiMathPoints 8s ease-in-out infinite;
+}
+
+/* Un poco de variedad visual */
+
+.hero .math-visual__points circle:nth-child(2),
+.hero .math-visual__points circle:nth-child(4),
+.hero .math-visual__points circle:nth-child(6) {
+    fill: #f47c04;
+}
+
+/* 
+   FORMAS GEOMÉTRICAS
+    */
+
+.hero .math-visual__geometry {
+    fill: none;
+
+    stroke: #f77cac;
+
+    stroke-width: 1.5;
+
+    opacity: 0.13;
+}
+
+/* 
+   LUCES
+    */
+
+.hero .math-visual__glow {
+    transform-origin: center;
+}
+
+.hero .math-visual__glow--one {
+    animation: popiMathGlow 12s ease-in-out infinite;
+}
+
+.hero .math-visual__glow--two {
+    animation: popiMathGlow 15s ease-in-out infinite reverse;
+}
+
+/* 
+   ANIMACIONES
+    */
+
+@keyframes popiMathCurve {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes popiMathPi {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(1deg);
+    }
+}
+
+@keyframes popiMathPoints {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes popiMathGlow {
+    0%,
+    100% {
+        transform: scale(1);
+
+        opacity: 0.78;
+    }
+
+    50% {
+        transform: scale(1.07);
+
+        opacity: 1;
+    }
+}
+
+/* 
+   NOTEBOOK / PANTALLAS INTERMEDIAS
+    */
+
+@media (max-width: 1080px) {
+    .hero .hero__grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(390px, 0.9fr);
+
+        gap: 22px;
+    }
+
+    .hero .math-visual {
+        height: clamp(450px, 66vh, 600px);
+    }
+
+    .hero .math-visual__svg {
+        width: 122%;
+        height: 122%;
+
+        transform: translateX(3%) scale(1.01);
+    }
+}
+
+/* 
+   PANTALLAS ANCHAS PERO BAJAS
+    */
+
+@media (min-width: 921px) and (max-height: 720px) {
+    section.hero {
+        padding-top: 18px;
+        padding-bottom: 22px;
+    }
+
+    .hero .hero__grid {
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 8.5vh, 4.6rem);
+
+        line-height: 1.02;
+    }
+
+    .hero .hero__lead {
+        margin-top: 14px;
+
+        font-size: 1rem;
+
+        line-height: 1.5;
+    }
+
+    .hero .hero__actions {
+        margin-top: 17px;
+    }
+
+    .hero .button--large {
+        min-height: 50px;
+    }
+
+    /*
+    En pantallas bajas el gráfico conserva bastante
+    presencia, pero no obliga al Hero a generar scroll.
+  */
+
+    .hero .math-visual {
+        height: min(67vh, 490px);
+    }
+
+    .hero .math-visual__svg {
+        width: 121%;
+        height: 121%;
+
+        transform: translateX(3%) scale(1.02);
+    }
+}
+
+/* 
+   TABLET
+    */
+
+@media (max-width: 920px) {
+    .hero .hero__grid {
+        display: block;
+    }
+
+    .hero .hero__copy {
+        position: relative;
+
+        z-index: 3;
+
+        width: min(100%, 700px);
+    }
+
+    /*
+    El gráfico deja de ocupar una columna independiente
+    y pasa a formar parte del fondo.
+  */
+
+    .hero .math-visual {
+        position: absolute;
+
+        top: 50%;
+        right: -170px;
+
+        z-index: 0;
+
+        width: 690px;
+        height: 690px;
+
+        transform: translateY(-50%);
+
+        opacity: 0.52;
+    }
+
+    .hero .math-visual__svg {
+        width: 100%;
+        height: 100%;
+
+        transform: scale(1.04);
+    }
+
+    .hero .math-visual__grid {
+        opacity: 0.08;
+    }
+
+    .hero .math-visual__axes {
+        opacity: 0.13;
+    }
+
+    .hero .math-visual__curve {
+        opacity: 0.32;
+    }
+
+    .hero .math-visual__curve-secondary {
+        opacity: 0.18;
+    }
+
+    .hero .math-visual__pi {
+        opacity: 0.08;
+    }
+
+    .hero .math-visual__formula {
+        opacity: 0.17;
+    }
+
+    .hero .math-visual__geometry {
+        opacity: 0.08;
+    }
+
+    .hero .math-visual__points {
+        opacity: 0.27;
+    }
+}
+
+/* 
+   MOBILE
+    */
+
+@media (max-width: 680px) {
+    section.hero {
+        min-height: calc(100vh - 68px);
+        min-height: calc(100svh - 68px);
+
+        padding-top: clamp(22px, 4vh, 38px);
+        padding-bottom: clamp(22px, 4vh, 38px);
+    }
+
+    .hero .hero__copy {
+        width: 100%;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+
+        font-size: clamp(2.55rem, 12vw, 4rem);
+
+        line-height: 1.03;
+    }
+
+    .hero .hero__lead {
+        max-width: 92%;
+
+        margin-top: 16px;
+
+        font-size: 0.98rem;
+
+        line-height: 1.55;
+    }
+
+    .hero .hero__actions {
+        display: grid;
+
+        gap: 10px;
+
+        margin-top: 20px;
+    }
+
+    .hero .hero__actions .button {
+        width: 100%;
+    }
+
+    /*
+    En mobile usamos solamente una parte del gráfico.
+    Sigue siendo grande, pero queda fuera del flujo
+    del documento y no aumenta la altura del Hero.
+  */
+
+    .hero .math-visual {
+        right: -300px;
+
+        width: 640px;
+        height: 640px;
+
+        opacity: 0.48;
+    }
+
+    .hero .math-visual__svg {
+        transform: scale(1.06);
+    }
+
+    /*
+    Sacamos las fórmulas porque en pantallas pequeñas
+    generan ruido visual detrás del texto.
+  */
+
+    .hero .math-visual__formula {
+        display: none;
+    }
+}
+
+/* 
+   CELULARES ANGOSTOS
+    */
+
+@media (max-width: 420px) {
+    .hero h1 {
+        font-size: clamp(2.35rem, 11.5vw, 3.2rem);
+    }
+
+    .hero .hero__lead {
+        max-width: 100%;
+
+        font-size: 0.94rem;
+    }
+
+    .hero .math-visual {
+        right: -335px;
+
+        width: 610px;
+        height: 610px;
+
+        opacity: 0.43;
+    }
+}
+
+/* 
+   ACCESIBILIDAD
+    */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero .math-visual *,
+    .hero .math-visual__curve,
+    .hero .math-visual__pi,
+    .hero .math-visual__points,
+    .hero .math-visual__glow {
+        animation: none !important;
+    }
+}
