@@ -1,6 +1,8 @@
 export const SITE = {
     name: "Poπ",
+
     descriptor: "Clases particulares de Matemática",
+
     title:
         "Clases particulares de Matemática en San Juan | Poπ",
 
@@ -9,14 +11,14 @@ export const SITE = {
 
     url:
         process.env.NEXT_PUBLIC_SITE_URL ||
-        "https://popi-math.vercel.app",
+        "https://clases-popi.vercel.app",
 
     whatsappNumber:
         process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ||
         "5492646716267",
 
     whatsappMessage:
-        "Hola, quiero consultar por clases de Matemática!!",
+        "Hola, quiero consultar por clases de Matemática!",
 
     experience: "+15",
 
