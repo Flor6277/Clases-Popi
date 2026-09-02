@@ -139,7 +139,7 @@ export default function About() {
                             particulares de Matemática. Trabajo principalmente
                             con alumnos de secundaria y también preparo a chicos
                             de 6º grado de primaria para el ingreso a los
-                            colegios preuniversitarios de la UNSJ.
+                            institutos preuniversitarios de la UNSJ.
                         </p>
 
                         <p className="section-text section-text--large">

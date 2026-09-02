@@ -20,7 +20,7 @@ const services = [
     {
         icon: BookOpenCheck,
         label: "Ingreso a preuniversitarios",
-        text: "Preparo a alumnos de 6º grado de primaria para rendir el ingreso a los colegios preuniversitarios de la UNSJ",
+        text: "Preparo a alumnos de 6º grado de primaria para rendir el ingreso a los institutos preuniversitarios de la UNSJ",
         items: [
             "6º grado de primaria",
             "Material de ingreso",
@@ -57,7 +57,7 @@ export default function Services() {
 
                     <p className="section-text">
                         La mayor parte de mis clases son de secundaria, pero
-                        también preparo ingresos a colegios preuniversitarios,
+                        también preparo ingresos a institutos preuniversitarios,
                         ingresos universitarios y algunas materias de nivel
                         universitario.
                     </p>

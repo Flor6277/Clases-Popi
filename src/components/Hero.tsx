@@ -21,7 +21,8 @@ export default function Hero() {
 
                     <p className="hero__lead">
                         Trabajamos los temas paso a paso, con explicaciones
-                        claras y práctica orientada a lo que necesitás preparar.
+                        claras y prácticas orientadas a lo que necesitas
+                        preparar.
                     </p>
 
                     <div className="hero__actions">

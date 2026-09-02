@@ -6,11 +6,11 @@ import { ChevronDown, ChevronUp, Minus, Plus } from "lucide-react";
 const questions = [
     {
         question: "¿Con qué niveles trabajo?",
-        answer: "Trabajo principalmente con alumnos de nivel secundario. También preparo a chicos de 6.º grado para el ingreso a colegios preuniversitarios y a estudiantes que necesitan Matemática para ingresos o algunas materias universitarias.",
+        answer: "Trabajo principalmente con alumnos de nivel secundario. También preparo a chicos de 6.º grado para el ingreso a institutos preuniversitarios y a estudiantes que necesitan Matemática para ingresos o algunas materias universitarias.",
     },
     {
-        question: "¿Preparás para el ingreso a colegios preuniversitarios?",
-        answer: "Sí. Preparo a alumnos de 6.º grado de primaria que van a rendir el ingreso a colegios preuniversitarios, especialmente los de la UNSJ. Trabajamos con el material correspondiente, repasamos los temas y hacemos práctica orientada al examen.",
+        question: "¿Preparás para el ingreso a institutos preuniversitarios?",
+        answer: "Sí. Preparo a alumnos de 6.º grado de primaria que van a rendir el ingreso a institutos preuniversitarios, especialmente los de la UNSJ. Trabajamos con el material correspondiente, repasamos los temas y hacemos práctica orientada al examen.",
     },
     {
         question: "¿También preparás ingresos universitarios?",
