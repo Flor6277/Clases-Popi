@@ -52,7 +52,8 @@ export default function Needs() {
                         Objetivos frecuentes
                     </span>
                     <h2 className="section-title" id="needs-title">
-                        Venís con una necesidad concreta. Trabajamos desde ahí.
+                        Venís con una necesidad concreta y buscamos la mejor
+                        forma de resolverla
                     </h2>
                 </div>
                 <div className="needs-grid">

@@ -15,17 +15,14 @@ export default function Contact() {
                             ¿Necesitás preparar Matemática?
                         </span>
 
-                        <h2>
-                            Contame qué estás preparando y en qué necesitás
-                            ayuda
-                        </h2>
+                        <h2>Contame qué necesitas preparar y comenzamos</h2>
 
                         <p>
                             Escribime por WhatsApp y contame el nivel, la
                             materia o el ingreso que estás preparando. Con eso
                             puedo ver qué necesitás trabajar y coordinamos la
                             modalidad, el día y el horario. Las clases pueden
-                            ser presenciales en San Juan u online.
+                            ser presenciales u online.
                         </p>
                     </div>
 

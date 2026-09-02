@@ -3,6 +3,7 @@ import { Comfortaa } from "next/font/google";
 
 import "./globals.css";
 import "./hero-visual.css";
+import "./responsive-fixes.css";
 
 import { SITE } from "@/config/site";
 

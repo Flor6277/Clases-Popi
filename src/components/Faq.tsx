@@ -75,7 +75,6 @@ export default function Faq() {
                     </h2>
 
                     <p className="section-text">
-                        Estas son algunas de las preguntas que suelen hacerme.
                         Si tenés otra duda, escribime por WhatsApp.
                     </p>
                 </div>

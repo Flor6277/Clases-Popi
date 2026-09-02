@@ -1,10 +1,10 @@
 export const SITE = {
     name: "Poπ",
 
-    descriptor: "Clases particulares de Matemática",
+    descriptor: "Clases de Matemática",
 
     title:
-        "Clases particulares de Matemática en San Juan | Poπ",
+        "Poπ | Clases de Matemática",
 
     description:
         "Clases particulares de Matemática en San Juan y online para secundaria, ingreso a colegios preuniversitarios, ingresos universitarios y algunas materias universitarias.",
@@ -18,11 +18,11 @@ export const SITE = {
         "5492646716267",
 
     whatsappMessage:
-        "Hola, quiero consultar por clases de Matemática!",
+        "Hola, quiero consultar por las clases de Matemática!",
 
     experience: "+15",
 
-    students: "+200",
+    students: "+300",
 } as const;
 
 export const whatsappUrl =

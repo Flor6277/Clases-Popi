@@ -55,7 +55,7 @@ export default function Footer() {
             <div className="container footer-bottom">
                 <span>
                     © {new Date().getFullYear()} Poπ. Todos los derechos
-                    reservados.
+                    reservados
                 </span>
 
                 <span className="footer-credit">
