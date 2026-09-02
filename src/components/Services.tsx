@@ -8,7 +8,7 @@ import {
 const services = [
     {
         icon: School,
-        label: "Secundaria",
+        label: "Clases de Nivel Secundario",
         text: "Es el nivel con el que más trabajo. Te ayudo a entender temas, resolver dudas, preparar evaluaciones, recuperar materias o reforzar contenidos que quedaron pendientes",
         items: [
             "Clases personalizadas",
@@ -19,7 +19,7 @@ const services = [
     },
     {
         icon: BookOpenCheck,
-        label: "Ingreso a preuniversitarios",
+        label: "Ingreso a Institutos Preuniversitarios",
         text: "Preparo a alumnos de 6º grado de primaria para rendir el ingreso a los institutos preuniversitarios de la UNSJ",
         items: [
             "6º grado de primaria",
@@ -30,13 +30,13 @@ const services = [
     },
     {
         icon: GraduationCap,
-        label: "Universidad e ingresos",
-        text: "Preparo en ingresos de Matemática y algunas materias universitarias. Trabajo especialmente con carreras de la UNSJ aunque también puedo preparar ingresos de otras universidades que incluyan contenido matemático",
+        label: "Clases de nivel Universitario e ingresos",
+        text: "Te ayudo a preparar el ingreso a la universidad en y también algunas materias universitarias con contenido matemático y de programación. ",
         items: [
-            "Ingresos universitarios",
+            "Ingresos a la universidad",
             "Matemática Básica",
             "Álgebra lineal",
-            "Materias con contenido matemático y programación",
+            "Análisis Matemático",
         ],
     },
 ];

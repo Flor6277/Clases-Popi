@@ -33,7 +33,7 @@ export default function Method() {
                     <h2 className="section-title">Así trabajamos</h2>
 
                     <p className="section-text">
-                        Primero veo qué necesitás y, a partir de ahí,
+                        Primero veo qué necesitas y, a partir de ahí,
                         organizamos la clase.
                     </p>
                 </div>
