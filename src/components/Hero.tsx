@@ -1,6 +1,12 @@
-import { ArrowDown, MessageCircle } from "lucide-react";
-import { whatsappUrl } from "@/config/site";
+import {
+    ArrowDown,
+    CheckCircle2,
+    MessageCircle,
+} from "lucide-react";
+
 import MathHeroVisual from "./MathHeroVisual";
+import WhatsAppLink from "./WhatsAppLink";
+import { SITE } from "@/config/site";
 
 export default function Hero() {
     return (
@@ -12,29 +18,29 @@ export default function Hero() {
             <div className="container hero__grid">
                 <div className="hero__copy">
                     <span className="eyebrow">
-                        Clases particulares de Matemática en San Juan
+                        San Juan · Presencial y online
                     </span>
 
                     <h1>
-                        Una forma más simple de aprender <span>Matemática</span>
+                        Clases particulares de <span>Matemática</span> para
+                        entender y avanzar
                     </h1>
 
                     <p className="hero__lead">
-                        Trabajamos los temas paso a paso, con explicaciones
-                        claras y prácticas orientadas a lo que necesitas
-                        preparar.
+                        Secundaria, ingresos y algunas materias universitarias.
+                        Trabajamos paso a paso, con explicaciones claras y
+                        práctica orientada a lo que necesitás preparar.
                     </p>
 
                     <div className="hero__actions">
-                        <a
+                        <WhatsAppLink
                             className="button button--primary button--large"
-                            href={whatsappUrl}
-                            target="_blank"
-                            rel="noreferrer"
+                            source="hero"
+                            aria-label="Consultar disponibilidad por WhatsApp"
                         >
                             <MessageCircle size={20} aria-hidden="true" />
-                            Consultar
-                        </a>
+                            Consultar disponibilidad
+                        </WhatsAppLink>
 
                         <a
                             className="button button--ghost button--large"
@@ -43,6 +49,21 @@ export default function Hero() {
                             ¿Cómo trabajamos?
                             <ArrowDown size={18} aria-hidden="true" />
                         </a>
+                    </div>
+
+                    <div className="trust-row" aria-label="Datos de Poπ">
+                        <span>
+                            <CheckCircle2 size={17} aria-hidden="true" />
+                            {SITE.experience} años de experiencia
+                        </span>
+                        <span>
+                            <CheckCircle2 size={17} aria-hidden="true" />
+                            {SITE.students} alumnos acompañados
+                        </span>
+                        <span>
+                            <CheckCircle2 size={17} aria-hidden="true" />
+                            Atención personalizada
+                        </span>
                     </div>
                 </div>
 

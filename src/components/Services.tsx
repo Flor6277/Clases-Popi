@@ -1,4 +1,5 @@
 import {
+    ArrowUpRight,
     BookOpenCheck,
     GraduationCap,
     School,
@@ -9,35 +10,38 @@ const services = [
     {
         icon: School,
         label: "Clases de Nivel Secundario",
-        text: "Es el nivel con el que más trabajo. Te ayudo a entender temas, resolver dudas, preparar evaluaciones, recuperar materias o reforzar contenidos que quedaron pendientes",
+        text: "Es el nivel con el que más trabajo. Te ayudo a entender temas, resolver dudas, preparar evaluaciones, recuperar materias o reforzar contenidos que quedaron pendientes.",
         items: [
             "Clases personalizadas",
             "Evaluaciones",
             "Materias previas",
             "Apoyo durante el cursado",
         ],
+        href: "/clases-matematica-secundaria-san-juan/",
     },
     {
         icon: BookOpenCheck,
         label: "Ingreso a Institutos Preuniversitarios",
-        text: "Preparo a alumnos de 6º grado de primaria para rendir el ingreso a los institutos preuniversitarios de la UNSJ",
+        text: "Preparo a alumnos de 6º grado de primaria para rendir el ingreso a los institutos preuniversitarios de la UNSJ.",
         items: [
             "6º grado de primaria",
             "Material de ingreso",
             "Práctica por temas",
             "Simulacros de examen",
         ],
+        href: "/ingreso-preuniversitarios-unsj/",
     },
     {
         icon: GraduationCap,
-        label: "Clases de nivel Universitario e ingresos",
-        text: "Te ayudo a preparar el ingreso a la universidad en y también algunas materias universitarias con contenido matemático y de programación. ",
+        label: "Nivel universitario e ingresos",
+        text: "Te ayudo a preparar la parte de Matemática de ingresos universitarios y algunas materias universitarias con contenido matemático. Antes de coordinar, reviso el programa o el material.",
         items: [
             "Ingresos a la universidad",
             "Matemática Básica",
-            "Álgebra lineal",
+            "Álgebra Lineal",
             "Análisis Matemático",
         ],
+        href: "/ingreso-universitario-matematica/",
     },
 ];
 
@@ -56,10 +60,12 @@ export default function Services() {
                     </h2>
 
                     <p className="section-text">
-                        La mayor parte de mis clases son de secundaria, pero
-                        también preparo ingresos a institutos preuniversitarios,
-                        ingresos universitarios y algunas materias de nivel
-                        universitario.
+                        La mayor parte de mis clases se concentra en el nivel
+                        secundario. Además, acompaño a alumnos que están por
+                        ingresar a institutos preuniversitarios o a la
+                        universidad, y a estudiantes que necesitan apoyo en
+                        algunas materias universitarias con contenido matemático
+                        o de programación.
                     </p>
                 </div>
 
@@ -85,6 +91,11 @@ export default function Services() {
                                     </li>
                                 ))}
                             </ul>
+
+                            <a className="detail-link" href={service.href}>
+                                Ver detalles
+                                <ArrowUpRight size={17} aria-hidden="true" />
+                            </a>
                         </article>
                     ))}
                 </div>

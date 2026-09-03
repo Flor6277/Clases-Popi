@@ -5,7 +5,8 @@ import { Menu, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 import Brand from "./Brand";
-import { NAV_ITEMS, whatsappUrl } from "@/config/site";
+import WhatsAppLink from "./WhatsAppLink";
+import { NAV_ITEMS } from "@/config/site";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -15,10 +16,10 @@ export default function Navbar() {
             <div className="container nav-shell">
                 <a
                     className="brand-link"
-                    href="#inicio"
+                    href="/#inicio"
                     aria-label="Poπ - ir al inicio"
                 >
-                    <Brand />
+                    <Brand priority />
                 </a>
 
                 <nav className="nav-desktop" aria-label="Navegación principal">
@@ -29,22 +30,21 @@ export default function Navbar() {
                     ))}
                 </nav>
 
-                {/* <a
+                <WhatsAppLink
                     className="button button--primary nav-cta"
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Consultar por WhatsApp"
+                    source="navbar_desktop"
+                    aria-label="Consultar disponibilidad por WhatsApp"
                 >
                     <FaWhatsapp size={20} aria-hidden="true" />
                     Consultar
-                </a> */}
+                </WhatsAppLink>
 
                 <button
                     className="menu-button"
                     type="button"
                     aria-label={open ? "Cerrar menú" : "Abrir menú"}
                     aria-expanded={open}
+                    aria-controls="mobile-navigation"
                     onClick={() => setOpen((value) => !value)}
                 >
                     {open ? (
@@ -56,7 +56,11 @@ export default function Navbar() {
             </div>
 
             {open && (
-                <nav className="nav-mobile" aria-label="Navegación móvil">
+                <nav
+                    id="mobile-navigation"
+                    className="nav-mobile"
+                    aria-label="Navegación móvil"
+                >
                     <div className="container nav-mobile__inner">
                         {NAV_ITEMS.map((item) => (
                             <a
@@ -68,17 +72,15 @@ export default function Navbar() {
                             </a>
                         ))}
 
-                        <a
+                        <WhatsAppLink
                             className="button button--primary"
-                            href={whatsappUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            onClick={() => setOpen(false)}
-                            aria-label="Consultar por WhatsApp"
+                            source="navbar_mobile"
+                            onPointerDown={() => setOpen(false)}
+                            aria-label="Consultar disponibilidad por WhatsApp"
                         >
                             <FaWhatsapp size={20} aria-hidden="true" />
                             Consultar por WhatsApp
-                        </a>
+                        </WhatsAppLink>
                     </div>
                 </nav>
             )}

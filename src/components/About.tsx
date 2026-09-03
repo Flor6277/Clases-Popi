@@ -136,21 +136,23 @@ export default function About() {
 
                         <p className="section-text section-text--large">
                             Soy Florencia y hace varios años doy clases
-                            particulares de Matemática. Trabajo principalmente
-                            con alumnos de secundaria y también preparo a chicos
-                            de 6º grado de primaria para el ingreso a los
-                            institutos preuniversitarios de la UNSJ.
+                            particulares de Matemática. Mi trabajo se centra
+                            principalmente en el nivel secundario y en el
+                            acompañamiento de alumnos de 6º grado de primaria
+                            que se preparan para ingresar a los institutos
+                            preuniversitarios de la UNSJ.
                         </p>
 
                         <p className="section-text section-text--large">
-                            También preparo ingresos universitarios de
-                            Matemática y acompaño en algunas materias de nivel
-                            universitario que tienen contenidos matemáticos. En
-                            cada caso me adapto al material, al nivel y a lo que
-                            necesita preparar el o la alumna. La idea no es
-                            resolver ejercicios porque sí, sino entender qué
-                            estamos haciendo para que después pueda hacerlo con
-                            mayor seguridad.
+                            Además, trabajo con estudiantes que deben rendir la
+                            parte de Matemática de distintos ingresos
+                            universitarios y con algunas materias de nivel
+                            universitario vinculadas con contenidos matemáticos
+                            y de programación. En cada caso adapto las clases al
+                            material, al nivel y al objetivo de cada alumno. La
+                            idea no es resolver ejercicios de manera mecánica,
+                            sino comprender qué estamos haciendo para poder
+                            avanzar con mayor seguridad y autonomía.
                         </p>
                     </div>
 

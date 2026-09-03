@@ -23,7 +23,7 @@ const testimonials = [
         detail: "Ingreso a colegio preuniversitario",
     },
     {
-        text: "Aprobé Matemáticas! Me sirvieron muchísimo las clases virtuales para repasar los temas que más me costaban del cursillo. Gracias por la paciencia y por explicarme todas las dudas que me iban surgiendo",
+        text: "Aprobé Matemáticas! Me sirvieron muchísimo las clases virtuales para repasar los temas que más me costaban del cursillo. Gracias por la paciencia y por explicarme todas las dudas que me iban surgiendo.",
         author: "Gerónimo C.",
         detail: "Ingreso universitario",
     },

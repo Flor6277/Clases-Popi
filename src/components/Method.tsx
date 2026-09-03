@@ -2,22 +2,22 @@ const steps = [
     {
         number: "01",
         title: "Primero veo dónde estás",
-        text: "Reviso qué estás estudiando, qué temas te cuestan y qué material estás usando.",
+        text: "Reviso qué estás estudiando, qué temas te cuestan y qué material estás usando",
     },
     {
         number: "02",
         title: "Te explico el tema",
-        text: "Lo trabajamos paso a paso y volvemos sobre lo que haga falta hasta que quede claro.",
+        text: "Lo trabajamos paso a paso y volvemos sobre lo que haga falta hasta que quede claro",
     },
     {
         number: "03",
         title: "Practicamos",
-        text: "Resolvemos ejercicios juntos, revisando cómo se hace cada paso y por qué.",
+        text: "Resolvemos ejercicios juntos, revisando cómo se hace cada paso y por qué",
     },
     {
         number: "04",
         title: "Preparamos lo que vas a rendir",
-        text: "Organizamos el repaso y practicamos teniendo en cuenta el tipo de examen, el material y el tiempo que queda.",
+        text: "Organizamos el repaso y practicamos teniendo en cuenta el tipo de examen, el material y el tiempo que queda",
     },
 ];
 
@@ -34,7 +34,7 @@ export default function Method() {
 
                     <p className="section-text">
                         Primero veo qué necesitas y, a partir de ahí,
-                        organizamos la clase.
+                        organizamos la clase
                     </p>
                 </div>
 

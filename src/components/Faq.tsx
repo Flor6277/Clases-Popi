@@ -6,32 +6,32 @@ import { ChevronDown, ChevronUp, Minus, Plus } from "lucide-react";
 const questions = [
     {
         question: "¿Con qué niveles trabajo?",
-        answer: "Trabajo principalmente con alumnos de nivel secundario. También preparo a chicos de 6.º grado para el ingreso a institutos preuniversitarios y a estudiantes que necesitan Matemática para ingresos o algunas materias universitarias.",
+        answer: "Trabajo principalmente con alumnos de nivel secundario. Además, acompaño a chicos de 6º grado que están por rendir el ingreso a institutos preuniversitarios y a estudiantes que necesitan Matemática para un ingreso o para determinadas materias universitarias",
     },
     {
         question: "¿Preparás para el ingreso a institutos preuniversitarios?",
-        answer: "Sí. Preparo a alumnos de 6.º grado de primaria que van a rendir el ingreso a institutos preuniversitarios, especialmente los de la UNSJ. Trabajamos con el material correspondiente, repasamos los temas y hacemos práctica orientada al examen.",
+        answer: "Sí. Trabajo con alumnos de 6º grado de primaria que van a rendir el ingreso a institutos preuniversitarios, especialmente los de la UNSJ. Utilizamos el material correspondiente, repasamos los contenidos y realizamos prácticas orientadas al tipo de examen que deberán rendir",
     },
     {
         question: "¿También preparás ingresos universitarios?",
-        answer: "Sí. Trabajo la parte de Matemática de distintos ingresos universitarios. Suelo preparar especialmente carreras de la UNSJ, aunque también puedo trabajar con ingresos de otras universidades si me enviás el programa o el material.",
+        answer: "Sí. Trabajo la parte de Matemática de distintos ingresos universitarios, especialmente de carreras de la UNSJ. También puedo acompañar ingresos de otras universidades siempre que me envíes previamente el programa o el material correspondiente",
     },
     {
         question: "¿Puedo consultarte por una materia universitaria?",
-        answer: "Sí. Doy apoyo en algunas materias universitarias que tienen contenidos de Matemática, Álgebra, Análisis, Probabilidad o Estadística. Antes de coordinar, mandame el programa o los temas para confirmar que puedo ayudarte.",
+        answer: "Sí. Doy apoyo en algunas materias universitarias que tienen contenidos de Matemática, Álgebra, Análisis, Probabilidad o Estadística. Antes de coordinar, mandame el programa o los temas para confirmar que puedo ayudarte",
     },
     {
         question: "¿Qué material tengo que llevar o enviar?",
-        answer: "Lo ideal es que me compartas lo que estés usando en la escuela, el ingreso o la universidad: programa, guías, apuntes, trabajos prácticos o evaluaciones anteriores. Así trabajamos directamente sobre lo que necesitás.",
+        answer: "Lo ideal es que me compartas lo que estés usando en la escuela, el ingreso o la universidad: programa, guías, apuntes, trabajos prácticos o evaluaciones anteriores. Así trabajamos directamente sobre lo que necesitás",
     },
     {
         question:
             "¿Puedo empezar aunque tenga temas anteriores que no entiendo?",
-        answer: "Sí. Muchas veces la dificultad actual viene de contenidos anteriores que no quedaron claros. Primero vemos dónde está el problema y, si hace falta, retomamos esa base antes de seguir.",
+        answer: "Sí. Muchas veces la dificultad actual viene de contenidos anteriores que no quedaron claros. Primero vemos dónde está el problema y, si hace falta, retomamos esa base antes de seguir",
     },
     {
         question: "¿Cómo coordinamos las clases?",
-        answer: "Escribime por WhatsApp y contame qué estás preparando, qué temas necesitás trabajar y si tenés una fecha de examen. Después coordinamos modalidad, día y horario según disponibilidad.",
+        answer: "Escribime por WhatsApp y contame qué estás preparando, qué temas necesitás trabajar y si tenés una fecha de examen. Después coordinamos modalidad, día y horario según disponibilidad",
     },
     {
         question: "¿Las clases pueden ser presenciales u online?",

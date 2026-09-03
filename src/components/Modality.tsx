@@ -1,4 +1,9 @@
-import { CheckCircle2, MapPin, Monitor } from "lucide-react";
+import {
+    ArrowUpRight,
+    CheckCircle2,
+    MapPin,
+    Monitor,
+} from "lucide-react";
 
 const modalities = [
     {
@@ -11,6 +16,7 @@ const modalities = [
             "Material de apoyo",
             "A tu ritmo",
         ],
+        href: "",
     },
     {
         icon: Monitor,
@@ -22,6 +28,7 @@ const modalities = [
             "Recursos digitales",
             "Horarios coordinados",
         ],
+        href: "/clases-matematica-online/",
     },
 ];
 
@@ -69,6 +76,19 @@ export default function Modality() {
                                         </li>
                                     ))}
                                 </ul>
+
+                                {modality.href ? (
+                                    <a
+                                        className="detail-link"
+                                        href={modality.href}
+                                    >
+                                        Ver clases online
+                                        <ArrowUpRight
+                                            size={17}
+                                            aria-hidden="true"
+                                        />
+                                    </a>
+                                ) : null}
                             </div>
                         </article>
                     ))}

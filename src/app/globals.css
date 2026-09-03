@@ -54,13 +54,27 @@
     box-sizing: border-box;
 }
 
+.need-card > div,
+.modality-card > div,
+.service-card,
+.method-card,
+.testimonial-card,
+.about-copy {
+    min-width: 0;
+}
+
 html {
+    max-width: 100%;
+    overflow-x: clip;
     scroll-behavior: smooth;
     background: var(--bg);
 }
 
 body {
+    max-width: 100%;
+    overflow-x: clip;
     margin: 0;
+    padding-top: 76px;
 
     color: var(--ink);
     background: var(--bg);
@@ -225,12 +239,16 @@ summary {
 
 /* Header */
 .site-header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 50;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
     border-bottom: 1px solid rgba(221, 230, 244, 0.9);
-    background: rgba(249, 251, 255, 0.92);
+    background: rgba(249, 251, 255, 0.96);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .nav-shell {

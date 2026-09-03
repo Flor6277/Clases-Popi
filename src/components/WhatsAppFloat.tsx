@@ -1,17 +1,16 @@
 import { FaWhatsapp } from "react-icons/fa";
-import { whatsappUrl } from "@/config/site";
+
+import WhatsAppLink from "./WhatsAppLink";
 
 export default function WhatsAppFloat() {
     return (
-        <a
+        <WhatsAppLink
             className="whatsapp-float"
-            href={whatsappUrl}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Consultar por WhatsApp"
-            title="Consultar por WhatsApp"
+            source="floating_button"
+            aria-label="Consultar disponibilidad por WhatsApp"
+            title="Consultar disponibilidad por WhatsApp"
         >
             <FaWhatsapp size={30} aria-hidden="true" />
-        </a>
+        </WhatsAppLink>
     );
 }
