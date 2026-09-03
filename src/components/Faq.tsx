@@ -18,7 +18,7 @@ const questions = [
     },
     {
         question: "¿Puedo consultarte por una materia universitaria?",
-        answer: "Sí. Doy apoyo en algunas materias universitarias que tienen contenidos de Matemática, Álgebra Lineal, Análisis Matemático, Matemática Básica, Algoritmos y Resolución de Problemas. Antes de coordinar, mandame el programa o los temas para confirmar que puedo ayudarte",
+        answer: "Sí. Doy apoyo en algunas materias universitarias que tienen contenidos de Matemática, Álgebra Lineal, Análisis Matemático, Matemática Básica, Algoritmos y Resolución de Problemas, entre otras. Antes de coordinar, mandame el programa o los temas para confirmar que puedo ayudarte",
     },
     {
         question: "¿Qué material tengo que llevar o enviar?",
