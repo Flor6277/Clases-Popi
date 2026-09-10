@@ -6,7 +6,7 @@ import "./hero-visual.css";
 import "./responsive-fixes.css";
 import "./service-detail.css";
 
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import WebVitals from "@/components/WebVitals";
 import { SITE } from "@/config/site";
 import { serializeJson } from "@/lib/serialize-json";
@@ -137,7 +137,9 @@ export default function RootLayout({
             <body className={`${comfortaa.className} ${comfortaa.variable}`}>
                 {children}
                 <WebVitals />
-                <GoogleAnalytics />
+                {process.env.NEXT_PUBLIC_GA_ID && (
+                    <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+                )}
 
                 <script
                     type="application/ld+json"
