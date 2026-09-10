@@ -9,6 +9,7 @@ import "./service-detail.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import WebVitals from "@/components/WebVitals";
 import { SITE } from "@/config/site";
+import { serializeJson } from "@/lib/serialize-json";
 
 const comfortaa = Comfortaa({
     subsets: ["latin"],
@@ -141,7 +142,7 @@ export default function RootLayout({
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(structuredData),
+                        __html: serializeJson(structuredData),
                     }}
                 />
             </body>

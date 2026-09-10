@@ -1,3 +1,7 @@
+import { getGoogleAnalyticsId, getPublicSiteUrl, getPublicSocialUrl } from "@/lib/public-config";
+
+const configuredWhatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
+
 export const SITE = {
     name: "Poπ",
     descriptor: "Clases particulares de Matemática",
@@ -7,28 +11,29 @@ export const SITE = {
     description:
         "Clases particulares de Matemática en San Juan y online para secundaria, preuniversitarios, ingresos universitarios y materias con contenido matemático.",
 
-    url:
-        process.env.NEXT_PUBLIC_SITE_URL ||
-        "https://popiclases.vercel.app",
+    url: getPublicSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
 
     location: "San Juan, Argentina",
     areaServed: "San Juan, Argentina",
 
-    whatsappNumber:
-        process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ||
-        "5492646716267",
+    whatsappNumber: /^[1-9]\d{7,14}$/.test(configuredWhatsappNumber)
+        ? configuredWhatsappNumber
+        : "5492646716267",
 
     whatsappMessage:
         "Hola, quiero consultar por las clases de Matemática. Mi nivel es ___ y necesito preparar ___.",
 
-    googleBusinessUrl:
-        process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL || "",
+    googleBusinessUrl: getPublicSocialUrl(process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL, [
+        "google.com", "www.google.com", "maps.google.com", "search.google.com",
+        "google.com.ar", "www.google.com.ar", "maps.app.goo.gl", "g.page", "g.co",
+        "business.google.com",
+    ]),
 
-    instagramUrl:
-        process.env.NEXT_PUBLIC_INSTAGRAM_URL || "",
+    instagramUrl: getPublicSocialUrl(process.env.NEXT_PUBLIC_INSTAGRAM_URL, [
+        "instagram.com", "www.instagram.com",
+    ]),
 
-    googleAnalyticsId:
-        process.env.NEXT_PUBLIC_GA_ID || "",
+    googleAnalyticsId: getGoogleAnalyticsId(process.env.NEXT_PUBLIC_GA_ID),
 
     experience: "+15",
     students: "+300",

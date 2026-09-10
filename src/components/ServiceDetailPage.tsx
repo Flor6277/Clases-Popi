@@ -11,6 +11,7 @@ import WhatsAppFloat from "./WhatsAppFloat";
 import WhatsAppLink from "./WhatsAppLink";
 import type { ServicePageData } from "@/config/services";
 import { SITE } from "@/config/site";
+import { serializeJson } from "@/lib/serialize-json";
 
 type ServiceDetailPageProps = {
     service: ServicePageData;
@@ -194,7 +195,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(structuredData),
+                    __html: serializeJson(structuredData),
                 }}
             />
         </>

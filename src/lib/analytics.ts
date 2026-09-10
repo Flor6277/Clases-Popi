@@ -1,10 +1,5 @@
-export type AnalyticsPayload = {
-    event: string;
-    source?: string;
-    pathname?: string;
-    value?: number;
-    rating?: string;
-};
+import { SITE } from "@/config/site";
+import { getAnalyticsPath, parseAnalyticsPayload, type AnalyticsPayload } from "./analytics-schema";
 
 declare global {
     interface Window {
@@ -14,29 +9,47 @@ declare global {
 }
 
 export function sendAnalyticsEvent(payload: AnalyticsPayload) {
-    const body = JSON.stringify(payload);
+    if (typeof window === "undefined") return;
 
-    if (typeof window !== "undefined") {
+    const pathname = getAnalyticsPath(window.location.pathname);
+    const event = parseAnalyticsPayload({ ...payload, pathname });
+    if (!event) return;
+
+    const body = JSON.stringify(event);
+    try {
         if (typeof window.gtag === "function") {
-            window.gtag("event", payload.event, {
-                source: payload.source,
-                page_path: payload.pathname,
-                value: payload.value,
-                rating: payload.rating,
+            window.gtag("event", event.event, {
+                ...(event.event === "whatsapp_click"
+                    ? { source: event.source }
+                    : { value: event.value, rating: event.rating }),
+                page_path: event.pathname,
+                page_location: `${SITE.url}${event.pathname}`,
+                page_referrer: "",
             });
         }
+    } catch {
+        // Optional analytics must not interfere with navigation or local metrics.
+    }
 
-        if (typeof navigator.sendBeacon === "function") {
-            navigator.sendBeacon("/api/analytics", body);
-        } else {
-            void fetch("/api/analytics", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body,
-                keepalive: true,
-            });
+    try {
+        if (typeof navigator.sendBeacon === "function" &&
+            navigator.sendBeacon("/api/analytics/", new Blob([body], { type: "application/json" }))) {
+            return;
         }
+    } catch {
+        // A browser may refuse to queue a beacon. Try a bounded fetch once.
+    }
+
+    try {
+        void fetch("/api/analytics/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body,
+            credentials: "omit",
+            keepalive: true,
+            signal: AbortSignal.timeout(5000),
+        }).catch(() => undefined);
+    } catch {
+        // Unsupported APIs and blocked requests are non-fatal. No retries.
     }
 }

@@ -35,7 +35,7 @@ export default function WhatsAppLink({
             {...props}
             href={href}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             onClick={handleClick}
         >
             {children}

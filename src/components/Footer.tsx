@@ -59,7 +59,7 @@ export default function Footer() {
                             <a
                                 href={SITE.googleBusinessUrl}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                             >
                                 <Star size={16} aria-hidden="true" />
                                 Reseñas en Google
@@ -70,7 +70,7 @@ export default function Footer() {
                             <a
                                 href={SITE.instagramUrl}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                             >
                                 <Instagram size={16} aria-hidden="true" />
                                 Instagram
@@ -91,7 +91,7 @@ export default function Footer() {
                     <a
                         href="https://www.github.com/Flor6277"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                     >
                         Flor Molina
                     </a>
