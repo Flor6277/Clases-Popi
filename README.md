@@ -27,4 +27,7 @@ Está pensada principalmente para estudiantes de nivel secundario, preparación 
 La idea fue crear una página sencilla donde una persona pueda conocer cómo trabajo, qué tipos de clases doy y comunicarse conmigo fácilmente para consultar por disponibilidad o clases.
 Además, me permitió seguir practicando desarrollo web utilizando Next.js, React y TypeScript.
 
+## Deploy
+La web está publicada con Vercel: https://popiclases.vercel.app
+
 ### FLOR 🪐 
