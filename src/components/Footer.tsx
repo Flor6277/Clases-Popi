@@ -89,7 +89,7 @@ export default function Footer() {
                 <span className="footer-credit">
                     Diseño y desarrollo ·{" "}
                     <a
-                        href="https://www.github.com/Flor6277"
+                        href="https://flor6277.github.io"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
